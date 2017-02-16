@@ -13,7 +13,7 @@ global.log = console.log;
 global.ct = require("./lib/context");
 
 
-var app = express();
+var app = express();//
 var fs = require("fs");
 
 var https = require("https");
