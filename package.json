@@ -1,0 +1,25 @@
+{
+  "name": "wifi-share",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "~1.16.0",
+    "cconf": "0.0.7",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "formidable": "^1.1.1",
+    "ioredis": "^2.5.0",
+    "jade": "~1.11.0",
+    "moment": "^2.17.1",
+    "mongodb": "^2.2.22",
+    "morgan": "~1.7.0",
+    "promise": "^7.1.1",
+    "serve-favicon": "~2.3.2",
+    "underscore": "^1.8.3"
+  }
+}
