@@ -16,7 +16,8 @@ module.exports = function(req, res, next) {
         return res.send({code: 0});
     }
     //log("liao2111", req_expire);
-    var cur_timestamp = new Date().getTime();
+    var cur_timestamp = new Date().getTime() / 1000;
+    log("liao1446,", cur_timestamp,",",req_expire_time);
     //code: -1表征该请求不在有效期内。
     if (cur_timestamp > req_expire_time) {
         return res.send({code:-1});
@@ -25,10 +26,13 @@ module.exports = function(req, res, next) {
         //return ct.error_handler(res, err);
     }
 
+
     //如果传了token过来，无论是http，还是https，都要验证，如果不传token，那么，只有https才放行。
 
-    req.userID = ct.mongo.get_object_id(req.body.userID);
 
+    var userID_str = req.body.userID;
+
+    log("liao1452,",req.userID,",",req.body.userID);
     var token_hash = req.body.token;
     //if (!token_hash) {
     //    if (req.secure) {
@@ -79,12 +83,12 @@ module.exports = function(req, res, next) {
     //    }
     //}
     //都不存在，只有https放行，http提示参数不全
-    if ((!req.userID) && (!token_hash)) {
+    if ((!userID_str) && (!token_hash)) {
         if (req.secure) {
             return next();
         }
         return res.send({code: 0});
-    } else if (req.userID && token_hash) {
+    } else if (userID_str && token_hash) {
         //都存在，不用管，自然就会去验证token
     } else {
         //有其中一个存在，另一个不存在,就提示参数错误
@@ -94,7 +98,11 @@ module.exports = function(req, res, next) {
 
     //下面是处理逻辑
 
-    ct.redis.hgetall(req.userID, function(ret) {
+    req.userID = ct.mongo.get_object_id(userID_str);
+
+    log("liao1613,");
+    ct.redis.hgetall(res, req.userID, function(ret) {
+        log("liao1614,");
         if (ret) {
             var is_same = ct.crypto.token_hash_compare(ret.token, req_expire_time, token_hash);
             if (!is_same) {
@@ -137,10 +145,10 @@ module.exports = function(req, res, next) {
 
             req.token = ret.token;
 
-            ct.redis.hmset(req.userID, {
+            ct.redis.hmset(res, req.userID, {
                 token: ret.token,
                 expire_timestamp: ret.expire_time
-            }, function(err, ret) {
+            }, function(ret) {
                 log("liao21714,", err, ret);
             });
             next();

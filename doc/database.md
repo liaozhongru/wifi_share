@@ -11,7 +11,7 @@
 		password_hash: 密码做了慢哈希处理，保存
 		token: 用户凭证
 		expire_timestamp: 用户凭证截止时间
-		value: 表明用户的价值
+		value: 表明用户的积分
 
 表名：wifi
 
@@ -39,7 +39,7 @@
 		_id: 使用userID为主键，表征谁上传的
 		content: 发布信息
 		pic_path: 图片路径
-		comment_array: 评论，是一个数组
+		comment_array: 评论，是一个数组，里面每一个成员如下
 			comment: 评论信息
 			comment_timestamp: 评论时间
 			author: 评论者的userID

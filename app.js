@@ -38,16 +38,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-app.use(function(req, res, next) {
-  log("liao2340");
-  if (req.secure) {
-    log("liaohttps");
-  } else {
-    log("liaohttp");
-  }
-  //return res.send({key: "hello,world"});
-  next();
-});
+//app.use(function(req, res, next) {
+//  log("liao2340");
+//  if (req.secure) {
+//    log("liaohttps");
+//  } else {
+//    log("liaohttp");
+//  }
+//  //return res.send({key: "hello,world"});
+//  next();
+//});
 
 //function
 //
@@ -67,8 +67,8 @@ var method_override = require("./middleware/method_override");
 app.use(method_override.res_send_override);
 
 
-//var token_parser = require("./middleware/token_parser");
-//app.use(token_parser);
+var token_parser = require("./middleware/token_parser");
+app.use(token_parser);
 
 ////为啥token_parse后面的app.use都不执行了呢？？哦，明白了，不执行，是因为，还没
 //执行到这里，就已经send错误。res不在往下走了。所以，必须要处理的东西，必须要放在token解析之前。

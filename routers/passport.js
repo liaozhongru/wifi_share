@@ -13,7 +13,7 @@ var crypto = require("../lib/crypto_lib");
 /**
  * 返回code 0:表示参数缺失，1:表征成功，2：表示已经有人注册了。
  */
-router.post("/register", function(req, res, next) {
+router.post("/register", function(req, res) {
     if (!req.secure) {
         return res.send({code: 8});
     }
@@ -56,26 +56,16 @@ router.post("/register", function(req, res, next) {
                 expire_timestamp: expire_timestamp,
                 value: 0
             }, function(ret) {
-                //llog("liao12353,", ret);
-
                 if (ret) {
                     var userID = ret.insertedId;
-                    //你需要确认这个insertedId是否是ObjectID对象。
-                    //log("liao21549,",col.is_object_id(userID));//确实是ObjectID
-
                     res.send({
                         code: 1,
                         userID: userID,
                         token: token
                     });
-                    //ct.redis.set(phone, token, function(err, ret) {
-                    //    llog("liao10003,",err, ret);
-                    //});
                     ct.redis.hmset(res, userID, {
                         token: token,
                         expire_timestamp: expire_timestamp
-                    }, function(err ,ret) {
-                        //llog("liao10043,", err, ret);
                     })
                 }
 
@@ -107,7 +97,8 @@ router.post("/login", function(req, res, next) {
         return res.send({code: 0});
     }
     col.findSome(res, {phone:phone}, 1, function(ret) {
-        ret = ret[0];
+        log("liao1616,", ret);
+        //ret = ret[0];
         if (!ret) {
             return res.send({code: 3})
         }
@@ -139,7 +130,7 @@ router.post("/login", function(req, res, next) {
                 ct.redis.hmset(res, userID, {
                     token: token,
                     expire_timestamp: expire_timestamp
-                }, function(err ,ret) {
+                }, function(ret) {
                     //llog("liao10043,", err, ret);
                 });
                 return res.send({
@@ -153,9 +144,12 @@ router.post("/login", function(req, res, next) {
     })
 });
 
-router.post("/logout", function(req, res, next) {
+router.post("/logout", function(req, res) {
     var col = ct.mongo.password_col;
+    log("liao1626,", req.userID);
+
     col.deleteOne(res, {_id: req.userID}, function(ret) {
+        log("liao1627, ",ret);
         ct.redis.hgetall(res, req.userID, function(ret) {
             if (!ret) {
                 return res.send({code: 1});

@@ -11,13 +11,13 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
 
-
-setInterval(function() {
-    log("liao1803");
-    var col = ct.mongo.v_col;
-
-
-}, 1000 * 60);
+//
+//setInterval(function() {
+//    log("liao1803");
+//    var col = ct.mongo.v_col;
+//
+//
+//}, 1000 * 60);
 
 router.post("/add_vegetable", function(req, res, next) {
     var type = req.body.type;
