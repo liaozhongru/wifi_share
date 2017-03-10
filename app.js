@@ -75,12 +75,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //这个中间件要提取出来。
 
-//app.use(function(req, res, next) {
-//
-//  log("liao21812");
-//
-//  next();
-//});
+app.use(function(req, res, next) {
+
+  log("liao21812");
+
+  next();
+});
 var method_override = require("./middleware/method_override");
 //log("liao2302,", method_override.res_send_override);
 
