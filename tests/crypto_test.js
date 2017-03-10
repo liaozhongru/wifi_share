@@ -22,17 +22,17 @@ var crypto = require("../lib/crypto_lib");
 
 
 
-var crypt_buf = crypto.rsa_crypt("hello,world----");
-
-log("liao0100,", crypt_buf);
-
-var decrypt_buf = crypto.rsa_decrypt(crypt_buf);
-log("liao0105,",decrypt_buf);
-
-var token = "5b29ccc47f23df0e474d5659a9de05f69d7f17d3e3431d3b16c3e72f429efc80d0eea86280b788762d43168edc246d8fd573270ac34b3c48ff486dd32894cc7b";
-var expire_time = "1588264350";
-
-var str = crypto.sha512(token+expire_time);
-log("liao1236, ", str);
+//var crypt_buf = crypto.rsa_crypt("hello,world----");
+//
+//log("liao0100,", crypt_buf);
+//
+//var decrypt_buf = crypto.rsa_decrypt(crypt_buf);
+//log("liao0105,",decrypt_buf);
+//
+//var token = "5b29ccc47f23df0e474d5659a9de05f69d7f17d3e3431d3b16c3e72f429efc80d0eea86280b788762d43168edc246d8fd573270ac34b3c48ff486dd32894cc7b";
+//var expire_time = "1588264350";
+//
+//var str = crypto.sha512(token+expire_time);
+//log("liao1236, ", str);
 
 //4af36e20e5c8d266752f4a449353c8c33555311230c99e9f32a8187b26febb410a36d93a14bbea704002026de49aecab8f6fbf98a0af2b476ec0ac4f35f1a806
