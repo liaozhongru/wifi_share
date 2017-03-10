@@ -7,13 +7,15 @@ var bodyParser = require('body-parser');
 //var multer  = require('multer');
 
 var cconf = require("cconf");
-var conf_loc = "./conf/dev/conf.json";
+
+//var conf_loc = "./conf/dev/conf.json";
+var conf_loc = __dirname + "/conf/dev/conf.json";
 cconf.file(conf_loc);
 global.cconf = cconf;
 global.log = console.log;
 global.ct = require("./lib/context");
 
-
+log("liao1423,",__dirname);
 var app = express();//
 var fs = require("fs");
 
