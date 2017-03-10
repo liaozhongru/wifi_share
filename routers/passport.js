@@ -61,7 +61,8 @@ router.post("/register", function(req, res) {
                     res.send({
                         code: 1,
                         userID: userID,
-                        token: token
+                        token: token,
+                        phone: phone
                     });
                     ct.redis.hmset(res, userID, {
                         token: token,
@@ -136,7 +137,8 @@ router.post("/login", function(req, res, next) {
                 return res.send({
                     code: 1,
                     userID: userID.toString(),
-                    token: token
+                    token: token,
+                    phone: phone
                 });
 
             });
@@ -148,19 +150,29 @@ router.post("/logout", function(req, res) {
     var col = ct.mongo.password_col;
     log("liao1626,", req.userID);
 
-    col.deleteOne(res, {_id: req.userID}, function(ret) {
+    //col.updateOne("", {name: "mengzhonghao"}, {token: 1}, "$unset", function(ret) {
+    //    log("liao1411, ", ret);
+    //});
+
+
+    col.updateOne(res, {_id: req.userID}, {token: 1, expire_timestamp: 1}, "$unset",function(ret) {
         log("liao1627, ",ret);
-        ct.redis.hgetall(res, req.userID, function(ret) {
-            if (!ret) {
-                return res.send({code: 1});
-            }
+        ct.redis.del(res, req.userID);
+        res.send({code: 1});
 
-            ct.redis.del(res, req.userID, function(ret) {
-                res.send({code: 1});
-            });
-        });
-
+        //ct.redis.hgetall(res, req.userID, function(ret) {
+        //    if (!ret) {
+        //        return res.send({code: 1});
+        //    }
+        //
+        //
+        //});
     });
+
+    //col.deleteOne(res, {_id: req.userID}, function(ret) {
+    //
+    //
+    //});
 });
 
 

@@ -21,7 +21,7 @@
 
 存储字段：
 
-		_id: 使用userID为主键,表征是谁上传的wifi
+		owner: 使用userID表征是谁上传的wifi
 		bssid: 路由器硬件地址
 		wifi_password:服务端做rsa加密，保存，保存的是buffer对象。
 		category: wifi类别
@@ -36,7 +36,7 @@
 
 存储字段：
 
-		_id: 使用userID为主键，表征谁上传的
+		owner: 使用userID，表征谁上传的
 		content: 发布信息
 		pic_path: 图片路径
 		comment_array: 评论，是一个数组，里面每一个成员如下

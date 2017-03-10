@@ -46,7 +46,21 @@ setTimeout(function() {
     //} else {
     //    log("liao9", b);
     //}
-    var col = new Collection(mongo, "col_test");
+    //var col = new Collection(mongo, "col_test");
+    //var objID = ct.mongo.get_object_id("58b69c6b019bb129951a296d");
+    //
+    //col.insertOne("", {_id: objID, bssid: "world"}, function(Ret) {
+    //    log("liao1210, ",Ret);
+    //});
+    //col.insertOne("", {name: "zhaolinxin", token: "hello,world", expire_time: "hhh"}, function(ret) {
+    //    log("liao1405, ", ret);
+    //});
+    //
+    //col.updateOne("", {name: "zhaolinxin"}, {token: 1, expire_time: 1}, "$unset", function(ret) {
+    //    log("liao1411, ", ret);
+    //});
+
+
 
 
     //col.insertOne("", {key2: [{key3: 3},{key3: 4},{key3: 5}],key1:1});
@@ -89,9 +103,9 @@ setTimeout(function() {
     //    ]
     //})
 
-    col.updateMany("", {}, {"array": {key2: 3}}, "inc", function(ret) {
-
-    });
+    //col.updateMany("", {}, {"array": {key2: 3}}, "inc", function(ret) {
+    //
+    //});
 
     //col.findAll("", {}, function(ret) {
     //    log("liao1809, ", ret.length);
@@ -176,12 +190,12 @@ setTimeout(function() {
     //    log("liao3,", docs);
     //})
 
-    var name = "loc";
-    var type = "2d";
-    //var option = {this.name: type};
-    var option = {};
-    option[name] = type;
-    log("liao2148, ", option);
+    //var name = "loc";
+    //var type = "2d";
+    ////var option = {this.name: type};
+    //var option = {};
+    //option[name] = type;
+    //log("liao2148, ", option);
 
     //var lbs_col = mongo.db.collection("wifi_lbs_a");
     //这是创建地理位置索引。
@@ -427,5 +441,22 @@ setTimeout(function() {
     //    }
     //})
 
+    //var a = 0.0;
+    //log("liao1159, ", parseFloat(a));
+    //if(a) {
+    //    log("liao1201");
+    //}
+
+
+    //var a = "["a","b"]";
+
+
+    var a = {sex: "true",age : "1"};
+    //if (a) {
+    //    log("liao2043");
+    //}
+
+    var b = ct.utils.is_object_empty(a);
+    log("liao2045, ",b);
 
 }, 2000);

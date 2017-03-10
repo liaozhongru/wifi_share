@@ -20,6 +20,7 @@ module.exports = {
         res.send = function(body) {
             if (typeof body.code == "number" && (body.code != 1)) {
                 ct.error_handler.save(body);
+                res.status(500);
             }
             res.new_send(body);
         };

@@ -4,6 +4,7 @@ var path = require('path');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+//var multer  = require('multer');
 
 var cconf = require("cconf");
 var conf_loc = "conf/dev/conf.json";
@@ -35,6 +36,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//app.use(multer({ dest: './resource/'}));
 
 
 
@@ -73,11 +75,15 @@ app.use(token_parser);
 ////为啥token_parse后面的app.use都不执行了呢？？哦，明白了，不执行，是因为，还没
 //执行到这里，就已经send错误。res不在往下走了。所以，必须要处理的东西，必须要放在token解析之前。
 //token解析放在路由加载后面。
-app.use(function(req, res, next) {
-  log("liao2339");
-  next();
-});
-
+//app.use(function(req, res, next) {
+//  log("liao2339");
+//  next();
+//});
+//
+//app.use(function(req, res, next) {
+//  log("liao2102");
+//
+//})
 
 
 

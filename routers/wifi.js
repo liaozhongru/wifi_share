@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
 
 
 router.post("/upload", function(req,res, next) {
+
     if (!req.secure) {
         return res.send({code: 8});
     }
@@ -26,9 +27,15 @@ router.post("/upload", function(req,res, next) {
     }
     wifi_password = ct.crypto.rsa_crypt(wifi_password);
 
+    log("liao1223, ",wifi_password);
+    longitude = parseFloat(longitude);
+    latitude = parseFloat(latitude);
+
+    //longitude = -73.97;
+    //latitude = 40.77;
 
     var obj = {
-        _id: req.userID,
+        owner: req.userID,
         bssid: bssid,
         wifi_password: wifi_password,
         category: "private"
@@ -56,36 +63,34 @@ router.post("/download", function(req, res, next) {
         return res.send({code: 8});
     }
     var bssid = req.body.bssid;
-
     if (!bssid) {
         return res.send({code: 0});
     }
     var col = ct.mongo.wifi_col;
-
-    //col.findSome(res, {bssid: bssid}, 1, function(ret) {
-    //    if (!ret) {
-    //        return res.send({code: 202});
-    //    }
-    //
-    //});
-    //ct.mongo.wifi_col.findOne()
     col.findOne(res, {bssid: bssid}, function(ret) {
         if (!ret) {
             return res.send({code: 202});
         }
-        ret.wifi_password = ct.crypto.rsa_decrypt(ret.wifi_password);
+        ret.wifi_password = ct.crypto.rsa_decrypt(ret.wifi_password.buffer);
         ret.code = 1;
         res.send(ret);
 
     })
 });
-
+/**
+ * 这是干嘛的？筛选出需要的wifi,以及他们的密码。
+ */
 router.post("/wifis_status", function(req, res, next) {
+    if (!req.secure) {
+        return res.send({code: 8});
+    }
+
     var bssids = req.body.bssids;
     if (!bssids || bssids.length < 1) {
         return res.send({code: 0});
     }
 
+    log("liao1250, ", bssids,bssids.length);
 
     var col = ct.mongo.wifi_col;
 
@@ -93,26 +98,16 @@ router.post("/wifis_status", function(req, res, next) {
 
     //bssids是数组
     col.findAll(res, {bssid: {"$in": bssids}}, function(ret) {
-        //log("liao1228,", ret);
-        //if (!ret) {
-        //
-        //}
-
-        var array = [];
         for (var i in ret) {
-            array.push(ret.bssid);
+            ret[i].wifi_password = ct.crypto.rsa_decrypt(ret[i].wifi_password.buffer);
         }
-        var data = {};
-        data.code = 1;
-        data.bssids = array;
-        res.send(data);
 
+        res.send({
+            code: 1,
+            data: ret
+        });
     })
 });
-
-//router.post("/user_status", function(req, res, next) {
-//
-//})
 
 
 module.exports = router;

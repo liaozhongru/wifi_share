@@ -45,3 +45,24 @@ var redis  = new Redis();
 //if (!a) {
 //    log("liao20005,", a);
 //}
+
+//ct.redis.hmset("","liao", {
+//    name: "liaozhongru",
+//    set: "nan",
+//    marry: "no"
+//});
+
+//ct.redis.hgetall("","liao", function(ret) {
+//    log("liao1450, ", ret);
+//    //if (!ret) {
+//    //    return res.send({code: 1});
+//    //}
+//
+//    //ct.redis.del(res, req.userID, function(ret) {
+//    //    res.send({code: 1});
+//    //});
+//});
+
+ct.redis.del("", "liao", function(ret) {
+    log("liao1450, ", ret);
+})
