@@ -43,21 +43,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="crypto_lib.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="crypto_lib.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/lib/crypto_lib.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-5.0">
+                <state vertical-scroll-proportion="0.30405405">
                   <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="upload_0b9bf20d65f03f0b92530ff8a63b4bd3" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/resource/public_pic/upload_0b9bf20d65f03f0b92530ff8a63b4bd3">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -803,7 +793,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/crypto_lib.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
+        <state vertical-scroll-proportion="0.30405405">
           <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding />
         </state>
@@ -813,14 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="130" selection-start-line="37" selection-start-column="2" selection-end-line="37" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resource/public_pic/upload_0b9bf20d65f03f0b92530ff8a63b4bd3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
