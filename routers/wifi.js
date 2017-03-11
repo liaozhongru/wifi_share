@@ -9,9 +9,11 @@ router.get('/', function(req, res, next) {
     res.send('respond with a resource');
 });
 
+//router.post("/upload_test", function(req, res) {
+//
+//});
 
-
-router.post("/upload", function(req,res, next) {
+router.post("/upload", function(req,res) {
 
     if (!req.secure) {
         return res.send({code: 8});

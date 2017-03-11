@@ -19,6 +19,16 @@ router.post("/permission", function(req, res) {
 /**
  * 发布阳台信息
  */
+
+router.post("/add_log", function(req, res) {
+
+  var files = req.files;
+  if (!files) {
+    return res.send({code: 0});
+  }
+  res.send({code: 1});
+});
+
 router.post("/add_info", function(req, res) {
 
   log("liao1425---, ", req.body);
