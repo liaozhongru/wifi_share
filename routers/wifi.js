@@ -40,7 +40,8 @@ router.post("/upload", function(req,res) {
         owner: req.userID,
         bssid: bssid,
         wifi_password: wifi_password,
-        category: "private"
+        category: "1",
+        favor_userIDs: []
     };
     var wifi_col = ct.mongo.wifi_col;
 
@@ -54,12 +55,15 @@ router.post("/upload", function(req,res) {
         if (!ret) {
             return res.send({code: 201});
         }
-        res.send({code: 1});
 
+        var password_col = ct.mongo.password_col;
+        password_col.updateOne(res, {_id: req.userID}, {status: 1,value:10000}, function(ret) {
+            res.send({code: 1});
+        });
     })
 });
 
-router.post("/download", function(req, res, next) {
+router.post("/download", function(req, res) {
 
     if (!req.secure) {
         return res.send({code: 8});
@@ -88,6 +92,11 @@ router.post("/wifis_status", function(req, res, next) {
     }
 
     var bssids = req.body.bssids;
+
+    log("liao1518, ", bssids);
+
+    bssids = JSON.parse(bssids);
+    log("liao2002,",bssids);
     if (!bssids || bssids.length < 1) {
         return res.send({code: 0});
     }
@@ -103,6 +112,7 @@ router.post("/wifis_status", function(req, res, next) {
         for (var i in ret) {
             ret[i].wifi_password = ct.crypto.rsa_decrypt(ret[i].wifi_password.buffer);
         }
+        log("liao2003, ", ret);
 
         res.send({
             code: 1,

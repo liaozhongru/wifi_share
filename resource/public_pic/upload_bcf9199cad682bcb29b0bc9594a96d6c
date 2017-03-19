@@ -1,0 +1,16 @@
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--GGRegisterViewController--dealloc-->
+<--GGLoginViewController-->
+<--<UIView: 0x166a3fc0; frame = (0 0; 320 100); autoresize = RM+BM; layer = <CALayer: 0x1669ac60>>-->
+<--liao1717, <NSIndexPath: 0x165e5e70> {length = 2, path = 2 - 0},,2,,0-->
+<--liao1717, <NSIndexPath: 0x16511890> {length = 2, path = 1 - 2},,1,,2-->
+<--liao1717, <NSIndexPath: 0x16529810> {length = 2, path = 1 - 1},,1,,1-->
+<--liao1717, <NSIndexPath: 0x16649670> {length = 2, path = 0 - 0},,0,,0-->
+<--liao1345, {
+    code = 6;
+}-->
+<--liao1641--, {
+    code = 6;
+}-->

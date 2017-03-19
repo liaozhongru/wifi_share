@@ -49,7 +49,58 @@
 
 //var e = "1";
 //log("liao2248,, ", typeof e == "number", e);
-var b = {};
-var c = [];
-b.ss = c;
-log("liaof1236,", b);
+//var b = {};
+//var c = [];
+//b.ss = c;
+//log("liaof1236,", b);
+
+//var a = "hello,world";
+//var b =  a.substring(0, 5);
+//log("liao1208, ", b);
+//
+//var rand = Math.random() - 0.00000001;
+//log("liao1211, ", rand);
+//var c = Math.round(rand * 100);
+//log("liao1213, ", c);
+//
+//var d = "世界杯足球队美国人中国人日本人";
+//var count = d.length;
+//var range = Math.round(rand * count);
+//range = Math.round(range / 3) * 3;
+//log("liao1305,", range);
+//log("liao1306, ", d.substring(range,range + 3));
+//
+//var e = ct.utils.random_name();
+//log("liao1312, ", e);
+//
+//
+
+
+//var n = ct.utils.random(0,10);
+//log("liao1336, ", n);
+
+
+//var dd = ct.utils.get_timestamp();
+//log("liao2233, ", dd);
+////log("liao1407, ", dd);
+////var p =  '/Users/liaozhongru/Desktop/11.Wifi/wifi_share/resource/public_pic/upload_24600046d87be6772d37d67d50860b80';
+////
+////var ss = p.indexOf("public_pic/");
+////log("liao2130, ", ss);
+////var pp = p.substring(ss);
+////log("liao2131, ", pp);
+//
+//var async = require("async");
+//
+////var
+
+//var file_path =  '/Users/liaozhongru/Desktop/11.Wifi/wifi_share/resource/public_pic/upload_24600046d87be6772d37d67d50860b80';
+var file_path = "public_pic/upload_24600046d87be6772d37d67d50860b80";
+var pos = file_path.indexOf("public_pic/");
+//log("liao2130, ", ss);
+var part_file_path = file_path.substring(pos);
+//
+log("liao1059, ",part_file_path);
+
+var path = ct.utils.trim2relative_path("public_pic",file_path);
+log("liao1111, ", path);

@@ -1,0 +1,14 @@
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--<UIView: 0x15d1c840; frame = (0 0; 320 100); autoresize = RM+BM; layer = <CALayer: 0x15d1c810>>-->
+<--liao1717, <NSIndexPath: 0x15d2bdc0> {length = 2, path = 1 - 2},,1,,2-->
+<--liao1717, <NSIndexPath: 0x15db59b0> {length = 2, path = 1 - 1},,1,,1-->
+<--liao1717, <NSIndexPath: 0x15e667c0> {length = 2, path = 1 - 2},,1,,2-->
+<--liao1717, <NSIndexPath: 0x15d06f30> {length = 2, path = 2 - 0},,2,,0-->
+<--liao1717, <NSIndexPath: 0x15dd4210> {length = 2, path = 3 - 0},,3,,0-->
+<--liao1717, <NSIndexPath: 0x15d2fbc0> {length = 2, path = 0 - 0},,0,,0-->
+<--liao1345, {
+    code = 6;
+}-->
+<--liao1641--, {
+    code = 6;
+}-->

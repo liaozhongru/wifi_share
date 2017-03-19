@@ -29,6 +29,7 @@ function parser(req, res, next) {
     var userID_str = req.body.userID;
     log("liao1452,",req.userID,",",req.body.userID);
     var token_hash = req.body.token;
+    log("liao2018, ", token_hash);
 
     if ((!userID_str) && (!token_hash)) {
         if (req.secure) {
@@ -45,13 +46,14 @@ function parser(req, res, next) {
 
     //下面是处理逻辑
     req.userID = ct.mongo.get_object_id(userID_str);
-    log("liao1431, ",userID_str, ",,,", req.userID);
+    log("liao1431, ",userID_str, ",,,", req.userID,"isobjeid,",ct.mongo.is_object_id(req.userID));
     log("liao1613,");
     ct.redis.hgetall(res, req.userID, function(ret) {
         if (ret) {
             log("liao1614,token ", ret.token);
             var is_same = ct.crypto.token_hash_compare(ret.token, req_expire_time, token_hash);
             if (!is_same) {
+                log("liao1950, ", ret.token);
                 return res.send({code: 6});
             }
             var token_expire_time = ret.expire_timestamp;
@@ -71,10 +73,12 @@ function parser(req, res, next) {
                 return res.send({code: 3});//用户不存在
             }
             if (!ret.token) {
+                log("liao1357,");
                 return res.send({code: -2});//用户未登录
             }
             var is_same = ct.crypto.token_hash_compare(ret.token, req_expire_time, token_hash);
             if (!is_same) {
+                log("liao1949");
                 return res.send({code: 6});
             }
             var token_expire_time = ret.expire_timestamp;

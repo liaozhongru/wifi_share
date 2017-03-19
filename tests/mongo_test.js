@@ -46,7 +46,25 @@ setTimeout(function() {
     //} else {
     //    log("liao9", b);
     //}
-    //var col = new Collection(mongo, "col_test");
+    var col = new Collection(mongo, "col_test");
+
+
+    //col.insertOne("", {name: "wangzhongying",array:[{key1:1,key2:2},{key1:3,key2:4}]}, function(ret) {
+    //    log("liao0005, ", ret);
+    //})
+
+    //col.updateOne("",{name: "wangzhongying"}, {array: {key1:5,key2:6}},"$push", function(ret) {
+    //    log("liao2107, ", ret);
+    //})
+    col.updateOne("",{name: "wangzhongying"}, {array: {key1:5}}, "$pull", function(ret) {
+        log("liao2109, ", ret);
+    })
+    //({“fruit”:{“$all”:["apple","banana"]}})
+
+    //查询数组里面是否包含某个数。
+    //col.findOne("",{name: "wang", "array": {"$all": ["zhongying"]}}, function(ret) {
+    //    log("liao1340, ", ret);
+    //})
     //var objID = ct.mongo.get_object_id("58b69c6b019bb129951a296d");
     //
     //col.insertOne("", {_id: objID, bssid: "world"}, function(Ret) {
@@ -116,10 +134,16 @@ setTimeout(function() {
     //var col = new Collection(mongo, "col_test").col;
     //col.findOneAndUpdate()
     //col.updateMany()
-    //col.insertOne("",{key100: 2, key101:[{key1:1,key2:2},{key3:3,key4: 4}]});
 
-    //
-    //col.updateOne("", {key100: 2}, {key101: {key1: 5, key2: 6}},"$push", function(ret) {
+    //col.insertOne("",{key113:1});
+
+    //col.updateMany("", {key113: 1},{key111:5},"$push", function(ret) {
+    //    log("liao0024, ", ret);
+    //})
+    //col.insertOne("",{key109: 2, key101:[{key1:1,key2:2},{key3:3,key4: 4}]});
+
+
+    //col.updateOne("", {key109: 2}, {key101: {key1: 5, key2: 6}},"$push", function(ret) {
     //
     //    log("liao1410, ",ret);
     //});
@@ -451,12 +475,50 @@ setTimeout(function() {
     //var a = "["a","b"]";
 
 
-    var a = {sex: "true",age : "1"};
-    //if (a) {
-    //    log("liao2043");
-    //}
+    //var a = {sex: "true",age : "1"};
+    ////if (a) {
+    ////    log("liao2043");
+    ////}
+    //
+    //var b = ct.utils.is_object_empty(a);
+    //log("liao2045, ",b);
 
-    var b = ct.utils.is_object_empty(a);
-    log("liao2045, ",b);
+    //找出附近的人 传入经纬度信息，以及半径--ok ,半径以米为单位
+    //var col = ct.mongo.wifi_col.col;
+
+    //var kk = {
+    //    "$geometry": {
+    //        type: "Point",
+    //        coordinates: [116.4024286571739, 39.91474174605558]
+    //    },
+    //    "$minDistance": 10,
+    //    "$maxDistance":100000
+    //}
+    //
+    //col.find({"loc": {"$nearSphere": kk}}).toArray(function(err, docs) {
+    //    log("liao2047, err, docs,", err, docs);
+    //})
+
+    //var col = ct.mongo.wifi_col;
+    //
+    //
+    //var filter = {
+    //    "$nearSphere":{
+    //        "$geometry": {
+    //            type: "Point",
+    //            coordinates: [116.4024286571739, 39.91474174605558]
+    //        },
+    //        "$minDistance": 10,
+    //        "$maxDistance":100000
+    //    }
+    //}
+    //col.findAll("", {loc: filter}, function(ret) {
+    //    log("liao2101, ret", ret[0].loc);
+    //})
+
+
+    //var routers = fs.readdirSync(router_dir);
+
+
 
 }, 2000);

@@ -29,10 +29,10 @@ var crypto = require("../lib/crypto_lib");
 //var decrypt_buf = crypto.rsa_decrypt(crypt_buf);
 //log("liao0105,",decrypt_buf);
 //
-var token = "b75f54c407ea9a77fc804164cea0bb2f53605c63505670f085bd1cd0883b3826d73955235837716267ef6f9cd6166aa644812344d6636350508037739675d464";
+var token = "aa6ee7c0a1252d51846b598ff1949e9727d4eed550f7b49ce4fcd333c2d384481e612dbec557d153e0d1a4c681057fad6dc155b0d6bb872682020fe0feb5cca6";
 var expire_time = "1588264350";
 
 var str = crypto.sha512(token+expire_time);
 log("liao1236, ", str);
 
-//c3e671da2f7d1fa736e6ccaab7ee6a7f9d14d0b36309a3c12ddb760a9f90fb49b6cc1d11c2e81deca48a33fbe41ef938eefe8a75987a8822ad531b15ab4c73d4
+//00a1247cacf6302593c9a87bae145de075139159884e78fdd4ca745d2c3757b6c59946308b2d913ff9dd4eb066b8a615619e1db14d701a31df6ab04cfbf95429
