@@ -1,0 +1,39 @@
+<--网络加载数据-->
+<--liao1928, test-->
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--初始化数据，一般是网络数据-->
+<--网络加载数据-->
+<--liao2123-->
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--liao1928, test-->
+<--liao1803, (null), (null)-->
+<--liao1743, sendData={
+    "expire_time" = 1588264350;
+    password = liaozhongru;
+    phone = 13391912170;
+}-->
+<--liao2053, 35.166.21.25-->
+<--liao1803, (null), (null)-->
+<--liao1743, sendData={
+    "expire_time" = 1588264350;
+    password = liaozhongru;
+    phone = 13391912170;
+}-->
+<--liao1454, 大哥，服务端加了个<<_id>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFString,value descript is58c26608b34de153c34e8faa
+keytype is __NSCFString,value descript is _id
+<--liao1454, 大哥，服务端加了个<<password_hash>>字段，但是你在客户端还没定义，快去定义-->
+keytype is __NSCFString,value descript is password_hash
+<--liao1454, 大哥，服务端加了个<<token_hash>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFString,value descript is8060aa3bc0f96c5a6d52befdd00457241a956a317b1a18bb618a893136386b6e282edd2c81934f9449672683c771193716102f4d133d3e1203b7ea5c8a8b7fbf
+keytype is __NSCFString,value descript is token_hash
+<--liaotoken is->185cc058f944a8aa7f23b0d48f7ba40e557bd7490c18f3c4e60c3db0691e6875ac66fd136fd2ad76b82e197bce4a7ed31da4f01e0ba990a39f8757f179bbf0e8-->
+<--liao1743, sendData={
+    "expire_time" = 1588264350;
+    password = liaozhongru;
+    phone = 13391912170;
+}-->
+<--网络加载数据-->
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--liao2123-->
+<--GGRegisterViewController--dealloc-->

@@ -1,0 +1,404 @@
+<--初始化数据，一般是网络数据-->
+<--网络加载数据-->
+<--liao2123-->
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--liao1928, test-->
+<--初始化数据，一般是网络数据-->
+<--liao2123-->
+��据-->
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--liao1928, test-->
+<--liao1803, (null), (null)-->
+<--liao1743, sendData={
+    "expire_time" = 1588264350;
+    password = liaozhongru;
+    phone = 13391912170;
+}-->
+<--liao2053, 35.166.21.25-->
+<--liao1803, (null), (null)-->
+<--liao1743, sendData={
+    "expire_time" = 1588264350;
+    password = liaozhongru;
+    phone = 13391912170;
+}-->
+<--GGRequest->requestFailed->liao1345, (null)-->
+<--liao1630, (null), https://35.166.21.25:3334-->
+<--liao1803, (null), (null)-->
+<--liao1743, sendData={
+    "expire_time" = 1588264350;
+    password = liaozhongru;
+    phone = 13391912170;
+}-->
+<--GGRequest->requestFailed->liao1345, (null)-->
+<--liao1630, (null), https://35.166.21.25:3334-->
+<--GGRequest->requestFailed->liao1345, (null)-->
+<--liao1630, (null), https://35.166.21.25:3334-->
+<--liao1803, (null), (null)-->
+<--liao1743, sendData={
+    "expire_time" = 1588264350;
+    password = liaozhongru;
+    phone = 13391912170;
+}-->
+<--liao1454, 大哥，服务端加了个<<_id>>字段，但是你在客户端还没定义，快去定义-->
+keytype is __NSCFString,value descript is password_hash
+8gXtZcgdAUaFmSuCpdCZYBucbdjv90x2YFsebj20bsrwka
+去定义-->
+<--liao1454, 大哥，服务端加了个<<token_hash>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFString,value descript is06e01f2faf1cee767242496746de9ab5f6422cd09226cad6af3f347f840eee0c70a44f09f39523001f2db7d4171be40053b7c9dea84f3db07a1fe8f9c0587abe
+keytype is __NSCFString,value descript is token_hash
+<--liaotoken is->f988444deec4a38fad7eea6756ba6841de99ab0ffd7bb57848e0759edee18aa6ea4e09be7f36a59b60a047a42b5cd47e1c3bf6c37615f21174cbfe876a051b3f-->
+<--liao1743, sendData={
+    "expire_time" = 1588264350;
+    password = liaozhongru;
+    phone = 13391912170;
+}-->
+<--网络加载数据-->
+<--liao2123-->
+<--你还没在GGBaseViewController的子类里面重写initUI这个方法-->
+<--GGRegisterViewController--dealloc-->
+<--GGLoginViewController-->
+<--liao1454, 大哥，服务端加了个<<BEACON_INT>>字段，但是你在客户端还没定义，快去定义-->
+<--liao1454, 大哥，服务端加了个<<AGE>>字段，但是你在客户端还没定义，快去定义-->
+
+valuetype is __NSCFNumber,value descript is0
+keytype is __NSCFConstantString,value descript is AGE
+<--liao1454, 大哥，服务端加了个<<AP_MODE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is2
+keytype is __NSCFConstantString,value descript is AP_MODE
+<--liao1454, 大哥，服务端加了个<<CHANNEL_FLAGS>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is8
+keytype is __NSCFConstantString,value descript is CHANNEL_FLAGS
+<--liao1454, 大哥，服务端加了个<<CAPABILITIES>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is1073
+keytype is __NSCFConstantString,value descript is CAPABILITIES
+<--liao1454, 大哥，服务端加了个<<80211D_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "IE_KEY_80211D_CHAN_INFO_ARRAY" =     (
+                {
+            "IE_KEY_80211D_FIRST_CHANNEL" = 1;
+            "IE_KEY_80211D_MAX_POWER" = 32;
+            "IE_KEY_80211D_NUM_CHANNELS" = 13;
+        }
+    );
+    "IE_KEY_80211D_COUNTRY_CODE" = CN;
+}
+keytype is __NSCFConstantString,value descript is 80211D_IE
+<--liao1454, 大哥，服务端加了个<<CHANNEL>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is11
+keytype is __NSCFConstantString,value descript is CHANNEL
+valuetype is __NSCFDictionary,value descript is{
+    "HT_BASIC_MCS_SET" = <00000000 00000000 00000000 00000000>;
+    "HT_DUAL_BEACON" = 0;
+    "HT_DUAL_CTS_PROT" = 0;
+    "HT_LSIG_TXOP_PROT_FULL" = 0;
+    "HT_NON_GF_STAS_PRESENT" = 1;
+    "HT_OBSS_NON_HT_STAS_PRESENT" = 0;
+    "HT_OP_MODE" = 1;
+    "HT_PCO_ACTIVE" = 0;
+    "HT_PCO_PHASE" = 0;
+    "HT_PRIMARY_CHAN" = 11;
+    "HT_PSMP_STAS_ONLY" = 0;
+    "HT_RIFS_MODE" = 0;
+    "HT_SECONDARY_BEACON" = 0;
+    "HT_SECONDARY_CHAN_OFFSET" = 3;
+    "HT_SERVICE_INT" = 0;
+    "HT_STA_CHAN_WIDTH" = 1;
+    "HT_TX_BURST_LIMIT" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_IE
+<--liao1454, 大哥，服务端加了个<<WPA_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "IE_KEY_WPA_AUTHSELS" =     (
+        2
+    );
+    "IE_KEY_WPA_MCIPHER" = 4;
+    "IE_KEY_WPA_UCIPHERS" =     (
+        4
+    );
+    "IE_KEY_WPA_VERSION" = 1;
+}
+keytype is __NSCFConstantString,value descript is WPA_IE
+<--liao1454, 大哥，服务端加了个<<HT_CAPS_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "AMPDU_PARAMS" = 27;
+    "ASEL_CAPS" = 0;
+    CAPS = 4206;
+    "EXT_CAPS" = 0;
+    "MCS_SET" = <ffffff00 00000000 00000000 80000000>;
+    "TXBF_CAPS" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_CAPS_IE
+<--liao1454, 大哥，服务端加了个<<BEACON_INT>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is20
+keytype is __NSCFConstantString,value descript is BEACON_INT
+<--liao1454, 大哥，服务端加了个<<BSSID>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFString,value descript isf4:83:cd:18:cb:7e
+keytype is __NSCFConstantString,value descript is BSSID
+<--liao1454, 大哥，服务端加了个<<AGE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is0
+keytype is __NSCFConstantString,value descript is AGE
+<--liao1454, 大哥，服务端加了个<<AP_MODE>>字段，但是你在客户端还没定义，快去定义-->
+keytype is __NSCFConstantString,value descript is AP_MODE
+<--liao1454, 大哥，服务端加了个<<CHANNEL_FLAGS>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is8
+keytype is __NSCFConstantString,value descript is CHANNEL_FLAGS
+<--liao1454, 大哥，服务端加了个<<CAPABILITIES>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is1073
+keytype is __NSCFConstantString,value descript is CAPABILITIES
+<--liao1454, 大哥，服务端加了个<<80211D_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "IE_KEY_80211D_CHAN_INFO_ARRAY" =     (
+                {
+            "IE_KEY_80211D_FIRST_CHANNEL" = 1;
+            "IE_KEY_80211D_MAX_POWER" = 35;
+            "IE_KEY_80211D_NUM_CHANNELS" = 13;
+        }
+    );
+    "IE_KEY_80211D_COUNTRY_CODE" = CN;
+}
+keytype is __NSCFConstantString,value descript is 80211D_IE
+<--liao1454, 大哥，服务端加了个<<CHANNEL>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is6
+keytype is __NSCFConstantString,value descript is CHANNEL
+<--liao1454, 大哥，服务端加了个<<HT_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "HT_BASIC_MCS_SET" = <00000000 00000000 00000000 00000000>;
+    "HT_DUAL_BEACON" = 0;
+    "HT_DUAL_CTS_PROT" = 0;
+    "HT_LSIG_TXOP_PROT_FULL" = 0;
+    "HT_NON_GF_STAS_PRESENT" = 0;
+    "HT_OBSS_NON_HT_STAS_PRESENT" = 0;
+    "HT_OP_MODE" = 0;
+    "HT_PCO_ACTIVE" = 0;
+    "HT_PCO_PHASE" = 0;
+    "HT_PRIMARY_CHAN" = 6;
+    "HT_PSMP_STAS_ONLY" = 0;
+    "HT_RIFS_MODE" = 1;
+    "HT_SECONDARY_BEACON" = 0;
+    "HT_SECONDARY_CHAN_OFFSET" = 3;
+    "HT_SERVICE_INT" = 0;
+    "HT_STA_CHAN_WIDTH" = 1;
+    "HT_TX_BURST_LIMIT" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_IE
+<--liao1454, 大哥，服务端加了个<<WPA_IE>>字段，但是你在客户端还没定义，快去定义-->
+keytype is __NSCFConstantString,value descript is WPA_IE
+<--liao1454, 大哥，服务端加了个<<HT_CAPS_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "AMPDU_PARAMS" = 27;
+    "ASEL_CAPS" = 0;
+    CAPS = 4590;
+    "EXT_CAPS" = 0;
+    "MCS_SET" = <ffffff00 00000000 00000000 01000000>;
+    "TXBF_CAPS" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_CAPS_IE
+<--liao1454, 大哥，服务端加了个<<BEACON_INT>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is20
+keytype is __NSCFConstantString,value descript is BEACON_INT
+valuetype is __NSCFString,value descript isde:ec:6:0:6:ec
+keytype is __NSCFConstantString,value descript is BSSID
+<--liao1454, 大哥，服务端加了个<<AGE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is0
+keytype is __NSCFConstantString,value descript is AGE
+<--liao1454, 大哥，服务端加了个<<AP_MODE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is2
+keytype is __NSCFConstantString,value descript is AP_MODE
+<--liao1454, 大哥，服务端加了个<<CHANNEL_FLAGS>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is8
+keytype is __NSCFConstantString,value descript is CHANNEL_FLAGS
+<--liao1454, 大哥，服务端加了个<<CAPABILITIES>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is1073
+keytype is __NSCFConstantString,value descript is CAPABILITIES
+<--liao1454, 大哥，服务端加了个<<CHANNEL>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is1
+keytype is __NSCFConstantString,value descript is CHANNEL
+<--liao1454, 大哥，服务端加了个<<HT_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "HT_BASIC_MCS_SET" = <00000000 00000000 00000000 00000000>;
+    "HT_DUAL_BEACON" = 0;
+    "HT_DUAL_CTS_PROT" = 0;
+    "HT_LSIG_TXOP_PROT_FULL" = 0;
+    "HT_NON_GF_STAS_PRESENT" = 0;
+    "HT_OBSS_NON_HT_STAS_PRESENT" = 0;
+    "HT_OP_MODE" = 0;
+    "HT_PCO_ACTIVE" = 0;
+    "HT_PCO_PHASE" = 0;
+    "HT_PRIMARY_CHAN" = 1;
+    "HT_PSMP_STAS_ONLY" = 0;
+    "HT_RIFS_MODE" = 1;
+    "HT_SECONDARY_BEACON" = 0;
+    "HT_SECONDARY_CHAN_OFFSET" = 0;
+    "HT_SERVICE_INT" = 0;
+    "HT_STA_CHAN_WIDTH" = 0;
+    "HT_TX_BURST_LIMIT" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_IE
+<--liao1454, 大哥，服务端加了个<<HT_CAPS_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "AMPDU_PARAMS" = 3;
+    "ASEL_CAPS" = 0;
+    CAPS = 300;
+    "EXT_CAPS" = 0;
+    "MCS_SET" = <ff000000 00000000 00000000 00000000>;
+    "TXBF_CAPS" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_CAPS_IE
+<--liao1454, 大哥，服务端加了个<<BEACON_INT>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is20
+keytype is __NSCFConstantString,value descript is BEACON_INT
+<--liao1454, 大哥，服务端加了个<<BSSID>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFString,value descript is8:c0:21:14:c5:78
+keytype is __NSCFConstantString,value descript is BSSID
+<--liao1454, 大哥，服务端加了个<<AGE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is0
+keytype is __NSCFConstantString,value descript is AGE
+<--liao1454, 大哥，服务端加了个<<AP_MODE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is2
+keytype is __NSCFConstantString,value descript is AP_MODE
+<--liao1454, 大哥，服务端加了个<<CHANNEL_FLAGS>>字段，但是你在客户端还没定义，快去定义-->
+keytype is __NSCFConstantString,value descript is CHANNEL_FLAGS
+<--liao1454, 大哥，服务端加了个<<CAPABILITIES>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is1041
+keytype is __NSCFConstantString,value descript is CAPABILITIES
+<--liao1454, 大哥，服务端加了个<<80211D_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "IE_KEY_80211D_CHAN_INFO_ARRAY" =     (
+                {
+            "IE_KEY_80211D_FIRST_CHANNEL" = 1;
+            "IE_KEY_80211D_MAX_POWER" = 16;
+            "IE_KEY_80211D_NUM_CHANNELS" = 13;
+        }
+    );
+    "IE_KEY_80211D_COUNTRY_CODE" = CN;
+}
+keytype is __NSCFConstantString,value descript is 80211D_IE
+<--liao1454, 大哥，服务端加了个<<CHANNEL>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is3
+keytype is __NSCFConstantString,value descript is CHANNEL
+<--liao1454, 大哥，服务端加了个<<HT_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "HT_BASIC_MCS_SET" = <00000000 00000000 00000000 00000000>;
+    "HT_DUAL_BEACON" = 0;
+    "HT_DUAL_CTS_PROT" = 0;
+    "HT_LSIG_TXOP_PROT_FULL" = 0;
+    "HT_NON_GF_STAS_PRESENT" = 1;
+    "HT_OBSS_NON_HT_STAS_PRESENT" = 0;
+    "HT_OP_MODE" = 0;
+    "HT_PCO_ACTIVE" = 0;
+    "HT_PCO_PHASE" = 0;
+    "HT_PRIMARY_CHAN" = 3;
+    "HT_PSMP_STAS_ONLY" = 0;
+    "HT_RIFS_MODE" = 0;
+    "HT_SECONDARY_BEACON" = 0;
+    "HT_SECONDARY_CHAN_OFFSET" = 0;
+    "HT_SERVICE_INT" = 0;
+    "HT_STA_CHAN_WIDTH" = 0;
+    "HT_TX_BURST_LIMIT" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_IE
+<--liao1454, 大哥，服务端加了个<<HT_CAPS_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "AMPDU_PARAMS" = 23;
+    "ASEL_CAPS" = 0;
+    CAPS = 108;
+    "EXT_CAPS" = 3072;
+    "MCS_SET" = <ffff0000 00000000 00000000 00000000>;
+    "TXBF_CAPS" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_CAPS_IE
+<--liao1454, 大哥，服务端加了个<<BEACON_INT>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is20
+{
+    "IE_KEY_WPA_AUTHSELS" =     (
+        2
+    );
+    "IE_KEY_WPA_MCIPHER" = 4;
+    "IE_KEY_WPA_UCIPHERS" =     (
+        4
+    );
+    "IE_KEY_WPA_VERSION" = 1;
+}
+keytype is __NSCFConstantString,value descript is BEACON_INT
+<--liao1454, 大哥，服务端加了个<<BSSID>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFString,value descript isbc:46:99:d2:19:88
+keytype is __NSCFConstantString,value descript is BSSID
+<--liao1454, 大哥，服务端加了个<<AGE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is0
+keytype is __NSCFConstantString,value descript is AGE
+<--liao1454, 大哥，服务端加了个<<AP_MODE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is2
+keytype is __NSCFConstantString,value descript is AP_MODE
+<--liao1454, 大哥，服务端加了个<<CHANNEL_FLAGS>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is8
+keytype is __NSCFConstantString,value descript is CHANNEL_FLAGS
+<--liao1454, 大哥，服务端加了个<<CAPABILITIES>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is1073
+keytype is __NSCFConstantString,value descript is CAPABILITIES
+<--liao1454, 大哥，服务端加了个<<80211D_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "IE_KEY_80211D_CHAN_INFO_ARRAY" =     (
+                {
+            "IE_KEY_80211D_FIRST_CHANNEL" = 1;
+            "IE_KEY_80211D_MAX_POWER" = 32;
+            "IE_KEY_80211D_NUM_CHANNELS" = 13;
+        }
+    );
+    "IE_KEY_80211D_COUNTRY_CODE" = CN;
+}
+valuetype is __NSCFNumber,value descript is8
+<--liao1454, 大哥，服务端加了个<<CHANNEL>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is1
+keytype is __NSCFConstantString,value descript is CHANNEL
+<--liao1454, 大哥，服务端加了个<<HT_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "HT_BASIC_MCS_SET" = <00000000 00000000 00000000 00000000>;
+    "HT_DUAL_BEACON" = 0;
+    "HT_DUAL_CTS_PROT" = 0;
+    "HT_LSIG_TXOP_PROT_FULL" = 0;
+    "HT_NON_GF_STAS_PRESENT" = 1;
+    "HT_OBSS_NON_HT_STAS_PRESENT" = 0;
+    "HT_OP_MODE" = 1;
+    "HT_PCO_ACTIVE" = 0;
+    "HT_PCO_PHASE" = 0;
+    "HT_PRIMARY_CHAN" = 1;
+    "HT_PSMP_STAS_ONLY" = 0;
+    "HT_RIFS_MODE" = 0;
+    "HT_SECONDARY_BEACON" = 0;
+    "HT_SECONDARY_CHAN_OFFSET" = 1;
+    "HT_SERVICE_INT" = 0;
+    "HT_STA_CHAN_WIDTH" = 1;
+    "HT_TX_BURST_LIMIT" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_IE
+<--liao1454, 大哥，服务端加了个<<WPA_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "IE_KEY_WPA_AUTHSELS" =     (
+        2
+    );
+    "IE_KEY_WPA_MCIPHER" = 4;
+    "IE_KEY_WPA_UCIPHERS" =     (
+        4
+    );
+    "IE_KEY_WPA_VERSION" = 1;
+}
+keytype is __NSCFConstantString,value descript is WPA_IE
+<--liao1454, 大哥，服务端加了个<<HT_CAPS_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFDictionary,value descript is{
+    "AMPDU_PARAMS" = 27;
+    "ASEL_CAPS" = 0;
+    CAPS = 4206;
+    "EXT_CAPS" = 0;
+    "MCS_SET" = <ffffff00 00000000 00000000 80000000>;
+    "TXBF_CAPS" = 0;
+}
+keytype is __NSCFConstantString,value descript is HT_CAPS_IE
+__NSCFData
+__NSCFData
+__NSCFData
+__NSCFData
+__NSCFData
+<--liao1454, 大哥，服务端加了个<<BSSID>>字段，但是你在客户端还没定义，快去定义-->
+<--liao1454, 大哥，服务端加了个<<HT_IE>>字段，但是你在客户端还没定义，快去定义-->
+valuetype is __NSCFNumber,value descript is2
+keytype is __NSCFConstantString,value descript is 80211D_IE
