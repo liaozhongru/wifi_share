@@ -95,12 +95,15 @@
 ////var
 
 //var file_path =  '/Users/liaozhongru/Desktop/11.Wifi/wifi_share/resource/public_pic/upload_24600046d87be6772d37d67d50860b80';
-var file_path = "public_pic/upload_24600046d87be6772d37d67d50860b80";
-var pos = file_path.indexOf("public_pic/");
-//log("liao2130, ", ss);
-var part_file_path = file_path.substring(pos);
+//var file_path = "public_pic/upload_24600046d87be6772d37d67d50860b80";
+//var pos = file_path.indexOf("public_pic/");
+////log("liao2130, ", ss);
+//var part_file_path = file_path.substring(pos);
+////
+//log("liao1059, ",part_file_path);
 //
-log("liao1059, ",part_file_path);
+//var path = ct.utils.trim2relative_path("public_pic",file_path);
+//log("liao1111, ", path);
 
-var path = ct.utils.trim2relative_path("public_pic",file_path);
-log("liao1111, ", path);
+var time = ct.utils.get_timestamp();
+log("liao1319,,", time);

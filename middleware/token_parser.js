@@ -24,7 +24,7 @@ function parser(req, res, next) {
     log("liao1446,", cur_timestamp,",",req_expire_time);
     //code: -1表征该请求不在有效期内。
     if (cur_timestamp > req_expire_time) {
-        return res.send({code:-1});
+        return res.send({code:11});
     }
     var userID_str = req.body.userID;
     log("liao1452,",req.userID,",",req.body.userID);
@@ -74,7 +74,7 @@ function parser(req, res, next) {
             }
             if (!ret.token) {
                 log("liao1357,");
-                return res.send({code: -2});//用户未登录
+                return res.send({code: 12});//用户未登录
             }
             var is_same = ct.crypto.token_hash_compare(ret.token, req_expire_time, token_hash);
             if (!is_same) {

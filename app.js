@@ -13,7 +13,18 @@ var cconf = require("cconf");
 var conf_loc = __dirname + "/conf/dev/conf.json";
 cconf.file(conf_loc);
 global.cconf = cconf;
-global.log = console.log;
+
+function log(){
+  //if ()
+  var close = true;
+  if (close) {
+    return;
+  }
+  console.log.apply(console, arguments);
+};
+
+//global.log = console.log;
+global.log = log;
 global.ct = require("./lib/context");
 
 log("liao1423,",__dirname);

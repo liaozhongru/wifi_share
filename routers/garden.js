@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
 //
 //}, 1000 * 60);
 
-router.post("/add_vegetable", function(req, res, next) {
+router.post("/add_vegetable", function(req, res) {
     var type = req.body.type;
     var position = req.body.position;
 

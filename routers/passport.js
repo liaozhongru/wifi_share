@@ -12,7 +12,13 @@ router.get('/', function(req, res, next) {
 });
 var crypto = require("../lib/crypto_lib");
 
+router.post("/time", function(req, res) {
 
+    return res.send({
+        code: 1,
+        time: ct.utils.get_timestamp()
+    });
+});
 router.post("/his_info", function(req, res) {
     log("liao1702, ",req.body);
     var his_userID = ct.mongo.get_object_id(req.body.his_userID);
@@ -288,9 +294,6 @@ router.post("/login", function(req, res) {
                 ret.userID = ret._id.toString();
                 ret.token_hash = ct.crypto.sha512(token + "1588264350");
                 ret.token = token;
-
-
-
                 return res.send(ret);
 
             });
