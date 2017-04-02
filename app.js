@@ -14,7 +14,7 @@ function fork_child() {
   global.cconf = cconf;
 
   function log(){
-    var close = false;
+    var close = true;
     if (close) {
       return;
     }
@@ -82,30 +82,33 @@ function fork_child() {
 //--------------------------
 
 
+//多核处理方案
+//var cluster = require('cluster');
+//var numCPUs = require('os').cpus().length;
+//console.log("liao1751,,,", numCPUs);
+//
+//
+//if (cluster.isMaster) {
+//  console.log("master start...");
+//
+//  // Fork workers.
+//  for (var i = 0; i < numCPUs; i++) {
+//    cluster.fork();
+//  }
+//
+//  cluster.on('listening',function(worker,address){
+//    console.log('listening: worker ' + worker.process.pid +', Address: '+address.address+":"+address.port);
+//  });
+//
+//  cluster.on('exit', function(worker, code, signal) {
+//    console.log('worker ' + worker.process.pid + ' died');
+//  });
+//} else {
+//  fork_child();
+//}
 
-var cluster = require('cluster');
-var numCPUs = require('os').cpus().length;
-console.log("liao1751,,,", numCPUs);
-
-
-if (cluster.isMaster) {
-  console.log("master start...");
-
-  // Fork workers.
-  for (var i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
-
-  cluster.on('listening',function(worker,address){
-    console.log('listening: worker ' + worker.process.pid +', Address: '+address.address+":"+address.port);
-  });
-
-  cluster.on('exit', function(worker, code, signal) {
-    console.log('worker ' + worker.process.pid + ' died');
-  });
-} else {
-  fork_child();
-}
+//单核处理方案
+fork_child();
 
 
 

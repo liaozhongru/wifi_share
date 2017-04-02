@@ -18,7 +18,7 @@ module.exports = {
     res_send_override: function(req, res, next) {
         res.new_send = res.send;
         res.send = function(body) {
-            console.log("liao1741,,," ,cluster.worker.id);
+            //console.log("liao1741,,," ,cluster.worker.id);
             log("liao1704,send,body is ",body);
             if (typeof body.code == "number" && (body.code != 1)) {
                 ct.error_handler.save(body);
