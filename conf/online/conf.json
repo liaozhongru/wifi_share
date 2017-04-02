@@ -1,0 +1,27 @@
+{
+  "core": {
+    "path_prefix": "/v1",
+    "project_identifier": "wifi_share"
+  },
+  "mongo": {
+    "host": "172.31.5.233:27017,172.31.30.58:27020",
+    "dbname": "test1",
+    "replicaSet": "rs0"
+  },
+  "password_collection":{
+    "col_name": "password"
+  },
+  "wifi_collection": {
+    "col_name": "wifi",
+    "index":[{"name": "loc", "type": "2dsphere"}]
+  },
+  "public_collection": {
+    "col_name": "public"
+  },
+  "vegetable_collection": {
+    "col_name": "vegetable"
+  },
+  "redis": {
+
+  }
+}

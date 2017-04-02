@@ -10,13 +10,14 @@ var bodyParser = require('body-parser');
 var cconf = require("cconf");
 
 //var conf_loc = "./conf/dev/conf.json";
-var conf_loc = __dirname + "/conf/dev/conf.json";
+//var file_loc = "conf"
+var conf_loc = __dirname + "/conf/online/conf.json";
 cconf.file(conf_loc);
 global.cconf = cconf;
 
 function log(){
   //if ()
-  var close = true;
+  var close = false;
   if (close) {
     return;
   }

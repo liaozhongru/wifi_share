@@ -21,24 +21,28 @@ router.get('/', function(req, res, next) {
 
 router.post("/add_vegetable", function(req, res) {
     var type = req.body.type;
-    var position = req.body.position;
+    var pos_x = req.body.pos_x;
+    var pos_y = req.body.pos_y;
 
-    if (!type || !position) {
+    if (!type || !pos_x || !pos_y) {
         return res.send({code: 0});
     }
 
     var col = ct.mongo.v_col;
     var vegetable = {
         type: type,
-        position: position,
-        status: 0
+        pos_x: pos_x,
+        pos_y: pos_y,
+        value: 0
     };
     col.updateOne(res, {_id: req.userID}, {vegetable: vegetable}, "$push", function(ret) {
-        if (!ret) {
-            return col.insertOne(res, {_id: req.useriD, vegetable: [vegetable]}, function(ret) {
+        log("liao1556, ", ret);
+        if (ret.matchedCount == 0) {
+            return col.insertOne(res, {_id: req.userID, vegetable: [vegetable]}, function(ret) {
                 if (!ret) {
                     return res.send({code: 301});
                 }
+                log("liao1558, ", ret);
                 res.send({code: 1});
             })
         }
@@ -46,14 +50,25 @@ router.post("/add_vegetable", function(req, res) {
     });
 });
 
-
-router.post("/vegetable_info", function(req, res) {
-    var lz_userID_str = req.body.lz_userID_str;
-
-    if (!lz_userID_str) {
+router.post("/remove_vegetable", function(req, res) {
+    var pos_x = req.body.pos_x;
+    var pos_y = req.body.pos_y;
+    if (!pos_x || !pos_y) {
         return res.send({code: 0});
     }
-    var lz_userID = ct.mongo.get_object_id(lz_userID_str);
+    var col = ct.mongo.v_col;
+    col.updateOne(res, {_id: req.userID}, {vegetable: {
+        pos_x: pos_x,
+        pos_y: pos_y
+    }}, "$pull", function(ret) {
+        log("liao1620,, ", ret);
+        return res.send({code: 1});
+    });
+});
+
+//查看这个菜园的菜信息
+router.post("/vegetable_info", function(req, res) {
+    var lz_userID = ct.mongo.get_object_id(req.body.lz_userID);
     if (!lz_userID) {
         return res.send({code: 112});
     }
@@ -66,6 +81,9 @@ router.post("/vegetable_info", function(req, res) {
         res.send({code: 1, data: ret.vegetable});
     })
 });
+
+
+//这是干啥的？
 
 router.post("/get_vegetable", function(req, res) {
     var timestamp = req.body.timestamp;
