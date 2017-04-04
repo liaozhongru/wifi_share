@@ -1,4 +1,18 @@
 //原来的app.js文件。
+
+
+function fork_http() {
+  var express = require('express');
+  var app = express();//
+
+  var path = require('path');
+  var http = require("http");
+
+  var server = http.createServer(app);
+  app.use(express.static(path.join(__dirname, 'resource')));
+  server.listen(3334);
+  console.log("liao");
+}
 function fork_child() {
   var argv = require("optimist").argv;
   //默认http 是3333，https是3334
@@ -133,5 +147,7 @@ function fork_child() {
 //}
 //
 ////单核处理方案
-fork_child();
+//fork_child();
+
+fork_http();
 
