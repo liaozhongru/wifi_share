@@ -82,16 +82,10 @@ function fork_child() {
 //--------------------------
 
 
-//多核处理方案
+////多核处理方案
 //var cluster = require('cluster');
 //var numCPUs = require('os').cpus().length;
-//console.log("liao1751,,,", numCPUs);
-//
-//
 //if (cluster.isMaster) {
-//  console.log("master start...");
-//
-//  // Fork workers.
 //  for (var i = 0; i < numCPUs; i++) {
 //    cluster.fork();
 //  }
@@ -106,10 +100,7 @@ function fork_child() {
 //} else {
 //  fork_child();
 //}
-
-//单核处理方案
+//
+////单核处理方案
 fork_child();
-
-
-
 
