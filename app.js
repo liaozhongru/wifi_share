@@ -4,14 +4,26 @@
 function fork_http() {
   var express = require('express');
   var app = express();//
+  var fs = require("fs");
 
   var path = require('path');
   var http = require("http");
 
   var server = http.createServer(app);
   app.use(express.static(path.join(__dirname, 'resource')));
-  server.listen(3334);
+  server.listen(3333);
   console.log("liao");
+
+
+  var https = require("https");
+  var options = {
+    key: fs.readFileSync(__dirname + "/resource/https_cert/server_nopwd.key"),
+    cert: fs.readFileSync(__dirname + "/resource/https_cert/server.crt")
+  };
+
+  https.createServer(options, app).listen(3334);
+
+
 }
 function fork_child() {
   var argv = require("optimist").argv;
