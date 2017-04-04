@@ -53,12 +53,12 @@ setTimeout(function() {
     //col.count("",{},function(ret) {
     //    log("liao1921,, ", ret);
     //})
-
+    //
     setInterval(function() {
 
         //
         for (var i=0; i < 10000; ++i) {
-            col.insertOne("", {age: ct.utils.random(0,10000)}, function(ret) {
+            col.insertOne("", {age: ct.utils.random(0,100000)}, function(ret) {
                 //log("liao1917,,");
             })
         }
@@ -66,7 +66,7 @@ setTimeout(function() {
         log("liao1945,,");
 
 
-    }, 1000 * 10);
+    }, 1000 * 20);
 
 
     //

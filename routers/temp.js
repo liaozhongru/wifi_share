@@ -11,8 +11,9 @@ router.post('/', function(req, res, next) {
 
 
   var col = ct.mongo.test;
-  col.findOne(res, {age:ct.utils.random()}, function(ret) {
-    return res.send({code: 1});
+
+  col.findOne(res, {age:ct.utils.random(0,100000)}, function(ret) {
+    return res.send({code: 1,data: ret});
   });
 
 
