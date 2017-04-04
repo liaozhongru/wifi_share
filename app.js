@@ -159,7 +159,7 @@ function fork_child() {
 //}
 //
 ////单核处理方案
-//fork_child();
+fork_child();
 
-fork_http();
+//fork_http();
 

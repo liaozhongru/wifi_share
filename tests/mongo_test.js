@@ -46,7 +46,31 @@ setTimeout(function() {
     //} else {
     //    log("liao9", b);
     //}
-    var col = new Collection(mongo, "col_test");
+    //var col = new Collection(mongo, "ctest");
+    var col = ct.mongo.test;
+
+
+    //col.count("",{},function(ret) {
+    //    log("liao1921,, ", ret);
+    //})
+
+    setInterval(function() {
+
+        //
+        for (var i=0; i < 10000; ++i) {
+            col.insertOne("", {age: ct.utils.random(0,10000)}, function(ret) {
+                //log("liao1917,,");
+            })
+        }
+
+        log("liao1945,,");
+
+
+    }, 1000 * 10);
+
+
+    //
+
 
 
     //col.insertOne("", {name: "wangzhongying",array:[{key1:1,key2:2},{key1:3,key2:4}]}, function(ret) {
@@ -56,9 +80,9 @@ setTimeout(function() {
     //col.updateOne("",{name: "wangzhongying"}, {array: {key1:5,key2:6}},"$push", function(ret) {
     //    log("liao2107, ", ret);
     //})
-    col.updateOne("",{name: "wangzhongying"}, {array: {key1:5}}, "$pull", function(ret) {
-        log("liao2109, ", ret);
-    })
+    //col.updateOne("",{name: "wangzhongying"}, {array: {key1:5}}, "$pull", function(ret) {
+    //    log("liao2109, ", ret);
+    //})
     //({“fruit”:{“$all”:["apple","banana"]}})
 
     //查询数组里面是否包含某个数。

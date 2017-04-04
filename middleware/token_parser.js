@@ -38,6 +38,7 @@ function parser(req, res, next) {
 
     if ((!userID_str) && (!token_hash)) {
         if (req.secure) {
+            log("liao103333");
             return next();
         }
         return res.send({code: 0});
