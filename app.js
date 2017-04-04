@@ -1,6 +1,15 @@
 //原来的app.js文件。
 function fork_child() {
   var argv = require("optimist").argv;
+  //默认http 是3333，https是3334
+  var http_port = argv.http_port? parseInt(argv.http_port): 3333;
+  var https_port = argv.https_port? parseInt(argv.https_port): 3334;
+  //不设置命令行，就用本地环境
+  var env = argv.env? argv.env: "dev";//online,pre
+  //不设置命令行，就用本地配置。
+  var printlog = argv.log? parsebool(argv.log): true;
+
+
 
   var express = require('express');
   var path = require('path');
@@ -10,8 +19,8 @@ function fork_child() {
   var bodyParser = require('body-parser');
   var cconf = require("cconf");
 
-  //不设置命令行，就用本地环境
-  var env = argv.env? argv.env: "dev";//online,pre
+
+
 
   var conf_loc = __dirname + "/conf/" + env + "/conf.json";
   cconf.file(conf_loc);
@@ -24,8 +33,7 @@ function fork_child() {
     return false;
   }
 
-  //不设置命令行，就用本地配置。
-  var printlog = argv.log? parsebool(argv.log): false;
+
 
   function log(){
     if (printlog) {
@@ -51,12 +59,18 @@ function fork_child() {
     cert: fs.readFileSync(__dirname + "/resource/https_cert/server.crt")
   };
 
-  https.createServer(options, app).listen(3334);
+
+
+  log("liao1421,,,", typeof http_port);
+  https.createServer(options, app).listen(https_port);
 
   var http = require("http");
 
   var server = http.createServer(app);
-  server.listen(3333);
+
+
+  log("liao1422,,,", https_port);
+  server.listen(http_port);
   server.on('error',function(error) {
     log("liao1447,",error);
     ct.error_handler.save(error);
