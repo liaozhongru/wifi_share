@@ -1,5 +1,7 @@
 //原来的app.js文件。
 function fork_child() {
+  var argv = require("optimist").argv;
+
   var express = require('express');
   var path = require('path');
   var debug = require('debug')('wifi-share:server');
@@ -7,24 +9,39 @@ function fork_child() {
   var cookieParser = require('cookie-parser');
   var bodyParser = require('body-parser');
   var cconf = require("cconf");
-  var pos = "dev";//online,pre
 
-  var conf_loc = __dirname + "/conf/" + pos + "/conf.json";
+  //不设置命令行，就用本地环境
+  var env = argv.env? argv.env: "dev";//online,pre
+
+  var conf_loc = __dirname + "/conf/" + env + "/conf.json";
   cconf.file(conf_loc);
   global.cconf = cconf;
 
-  function log(){
-    var close = true;
-    if (close) {
-      return;
+  function parsebool(str) {
+    if (str == "true") {
+      return true;
     }
-    console.log.apply(console, arguments);
+    return false;
+  }
+
+  //不设置命令行，就用本地配置。
+  var printlog = argv.log? parsebool(argv.log): false;
+
+  function log(){
+    if (printlog) {
+      console.log.apply(console, arguments);
+    }
+
   };
 
   global.log = log;
   global.ct = require("./lib/context");
 
   log("liao1423,",__dirname);
+  //log("liao1344, ", argv.port);
+  //log("liao1345, ", parsebool(argv.close));
+
+
   var app = express();//
   var fs = require("fs");
 
