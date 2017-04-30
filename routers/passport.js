@@ -14,6 +14,7 @@ var crypto = require("../lib/crypto_lib");
 
 router.post("/time", function(req, res) {
 
+    log("liao1402,",req.token);
     return res.send({
         code: 1,
         time: ct.utils.get_timestamp()

@@ -54,19 +54,19 @@ setTimeout(function() {
     //    log("liao1921,, ", ret);
     //})
     //
-    setInterval(function() {
-
-        //
-        for (var i=0; i < 10000; ++i) {
-            col.insertOne("", {age: ct.utils.random(0,100000)}, function(ret) {
-                //log("liao1917,,");
-            })
-        }
-
-        log("liao1945,,");
-
-
-    }, 1000 * 20);
+    //setInterval(function() {
+    //
+    //    //
+    //    for (var i=0; i < 10000; ++i) {
+    //        col.insertOne("", {age: ct.utils.random(0,100000)}, function(ret) {
+    //            //log("liao1917,,");
+    //        })
+    //    }
+    //
+    //    log("liao1945,,");
+    //
+    //
+    //}, 1000 * 20);
 
 
     //

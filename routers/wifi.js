@@ -12,6 +12,14 @@ router.get('/', function(req, res, next) {
 //router.post("/upload_test", function(req, res) {
 //
 //});
+router.post("/upload_scan", function(req, res) {
+
+});
+
+router.post("/download_scan", function(req, res) {
+
+});
+
 
 router.post("/upload", function(req,res) {
 
@@ -20,11 +28,13 @@ router.post("/upload", function(req,res) {
     }
     var bssid = req.body.bssid;
     var wifi_password = req.body.wifi_password;
+    var speed = req.body.speed;
     var longitude = req.body.longitude;
     var latitude = req.body.latitude;
     //var userID = req.userID;
 
-    if (!(bssid && wifi_password && longitude && latitude)) {
+    log("liao1301, ", speed);
+    if (!(bssid && wifi_password && longitude && latitude && speed)) {
         return res.send({code: 0});
     }
     wifi_password = ct.crypto.rsa_crypt(wifi_password);
@@ -40,6 +50,7 @@ router.post("/upload", function(req,res) {
         owner: req.userID,
         bssid: bssid,
         wifi_password: wifi_password,
+        speed: speed,
         category: "1",
         favor_userIDs: []
     };
