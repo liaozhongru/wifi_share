@@ -21,6 +21,16 @@ router.post("/download_scan", function(req, res) {
 });
 
 
+router.get("/pay", function(req, res) {
+    log("liao1102,,,,");
+    //return res.send({code: 1});
+    //var col = ct.mongo.password_col;
+    //col.updateOne(res, {})
+    res.send({code: 1});
+
+});
+
+
 router.post("/upload", function(req,res) {
 
     if (!req.secure) {

@@ -18,6 +18,7 @@ function parser(req, res, next) {
     log("liao21809, body = ", req.body);
 
     log("liao1942, file = ", req.files);
+    log("liao1107, ",req.query.expire_time);
 
     var req_expire_time= req.body.expire_time;
     log("liao1703, ", req_expire_time);
@@ -109,10 +110,17 @@ module.exports = function(req, res, next) {
     log("liao2056");
 
     //这里处理的form-data格式的post请求体
+    //body为空，有两种情况，情况1，使用的是get请求，情况2，使用的是form-data的请求。
+    log("liao1116,", req.baseUrl);
     if (ct.utils.is_object_empty(req.body)) {
         ct.utils.parser_upload_file(req, res, function(fields, files) {
             if (!fields) {
                 log("liao1929,");
+                //如果，不是form-data，那么，就是get请求，这里get请求一律不做token解析。
+                if (req.query) {
+                    log("liao1123, ",req.query);
+                    return next();
+                }
                 return res.send({code: 0});
             }
             log("liao2057");
@@ -122,6 +130,7 @@ module.exports = function(req, res, next) {
         });
     } else {
         //这里处理的是x-www-form-urlencoded的post请求体
+
         parser(req, res, next);
     }
 };
