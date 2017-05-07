@@ -152,8 +152,8 @@
           <file leaf-file-name="conf.json" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/conf/online/conf.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2866242">
-                  <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+                <state vertical-scroll-proportion="0.15923567">
+                  <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -199,7 +199,6 @@
         <option value="$PROJECT_DIR$/tests/other_test.js" />
         <option value="$PROJECT_DIR$/lib/error_handler_lib.js" />
         <option value="$PROJECT_DIR$/routers/garden.js" />
-        <option value="$PROJECT_DIR$/conf/online/conf.json" />
         <option value="$PROJECT_DIR$/middleware/method_override.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routers/temp/temp.js" />
@@ -214,6 +213,7 @@
         <option value="$PROJECT_DIR$/middleware/token_parser.js" />
         <option value="$PROJECT_DIR$/routers/wifi.js" />
         <option value="$PROJECT_DIR$/resource/avatar/example1.html" />
+        <option value="$PROJECT_DIR$/conf/online/conf.json" />
       </list>
     </option>
   </component>
@@ -930,8 +930,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/online/conf.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2866242">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.15923567">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
           <folding />
         </state>
       </provider>

@@ -4,9 +4,9 @@
     "project_identifier": "wifi_share"
   },
   "mongo": {
-    "host": "172.31.5.233:27017,172.31.30.58:27020",
+    "host": "localhost:27030,localhost:27031",
     "dbname": "test1",
-    "replicaSet": "rs0"
+    "replicaSet": "rs30"
   },
   "password_collection":{
     "col_name": "password"
